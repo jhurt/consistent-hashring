@@ -1,0 +1,25 @@
+{
+    "name": "consistent-hashring",
+    "author": "Jason Hurt",
+    "description": "A simple, pure JS implementation of consistent hashing",
+    "homepage": "https://github.com/jhurt/consistent-hashring",
+    "version": "0.0.1",
+    "directories": {
+        "lib": "./lib"
+    },
+    "main": "index",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jhurt/consistent-hashring.git"
+    },
+    "devDependencies": {
+        "mocha": "^7.1.2"
+    },
+    "scripts": {
+        "test": "mocha test/test.js"
+    },
+    "bugs": {
+        "url": "http://github.com/jhurt/consistent-hashring/issues"
+    },
+    "license": "MIT"
+}
