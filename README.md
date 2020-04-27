@@ -2,6 +2,10 @@
 
 A simple, pure JS implementation of [consistent hashing.](https://en.wikipedia.org/wiki/Consistent_hashing)
 
+### Build status
+
+[![BuildStatus](https://secure.travis-ci.org/jhurt/consistent-hashring.png?branch=master)](http://travis-ci.org/jhurt/consistent-hashring)
+
 ## Install
 ```bash
 npm install consistent-hashring
