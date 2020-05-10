@@ -52,16 +52,6 @@ hashring.addNode('nodeB', 200); //twice the default weight
 By default, a `ConsistentHashRing` uses 
 Gary Court's [murmurhash3_32_gc implementation](http://github.com/garycourt/murmurhash-js)
 for hashing.
-This is not a perfect hash algorithm; there can be collisions between nodes.
-However, collisions are infrequent, and the algorithm is relatively fast and distributes well.
-When using a non-perfect hash function, it's possible for a
-node's replica to collide with another node's replica during `addNode`.
-For simplicity's sake, the particular colliding replica is simply skipped.
-This allows ConsistentHashRing to not care about collisions, since having 99 vs 100 replicas
-doesn't matter much in practice. 
-This simple handling of collisions also means that the hashing algorithm you provide should
-have a low number of collisions. If the number of collisions is too high, it's possible
-that nodes added earlier get weighted more than nodes added later. 
 You can modify `test/test.js` and run `npm run test` to see how
 well your hash function distributes.
 You can inject your own hashing algorithm when instantiating a `ConsistentHashRing`
